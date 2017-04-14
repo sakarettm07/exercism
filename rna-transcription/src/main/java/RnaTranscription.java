@@ -6,6 +6,7 @@ public class RnaTranscription {
     public RnaTranscription() {
         translation = new HashMap<>();
         translation.put("C", "G");
+        translation.put("G", "C");
     }
 
     public String ofDna(String dnaString) {
