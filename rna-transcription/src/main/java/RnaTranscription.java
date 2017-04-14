@@ -8,6 +8,7 @@ public class RnaTranscription {
         translation.put("C", "G");
         translation.put("G", "C");
         translation.put("T", "A");
+        translation.put("A", "U");
     }
 
     public String ofDna(String dnaString) {
