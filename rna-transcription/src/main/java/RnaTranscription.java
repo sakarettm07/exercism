@@ -14,6 +14,15 @@ public class RnaTranscription {
     public String ofDna(String dnaString) {
         if (dnaString.isEmpty())
             return "";
-        else return translation.get(dnaString);
+
+        StringBuilder rnaString = new StringBuilder();
+        for (int i = 0; i < dnaString.length(); i++)
+            rnaString.append(getTranslatedChar(dnaString.charAt(i)));
+
+        return rnaString.toString();
+    }
+
+    private String getTranslatedChar(char currentChar) {
+        return translation.get(String.valueOf(currentChar));
     }
 }
