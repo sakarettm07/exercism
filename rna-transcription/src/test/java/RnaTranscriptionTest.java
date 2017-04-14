@@ -27,7 +27,6 @@ public class RnaTranscriptionTest {
         Assert.assertEquals("C", rnaTranscription.ofDna("G"));
     }
 
-    @Ignore
     @Test
     public void testRnaTranscriptionOfThymineIsAdenine() {
         Assert.assertEquals("A", rnaTranscription.ofDna("T"));
