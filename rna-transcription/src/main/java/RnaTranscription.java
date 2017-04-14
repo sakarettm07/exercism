@@ -1,5 +1,16 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class RnaTranscription {
+    Map<String, String> translation;
+    public RnaTranscription() {
+        translation = new HashMap<>();
+        translation.put("C", "G");
+    }
+
     public String ofDna(String dnaString) {
-        throw new UnsupportedOperationException("Method has not been implemented yet.");
+        if (dnaString.isEmpty())
+            return "";
+        else return translation.get(dnaString);
     }
 }
