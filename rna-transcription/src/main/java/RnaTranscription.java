@@ -2,13 +2,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RnaTranscription {
-    Map<String, String> translation;
+    Map<Character, String> translation;
+    
     public RnaTranscription() {
         translation = new HashMap<>();
-        translation.put("C", "G");
-        translation.put("G", "C");
-        translation.put("T", "A");
-        translation.put("A", "U");
+        translation.put('C', "G");
+        translation.put('G', "C");
+        translation.put('T', "A");
+        translation.put('A', "U");
     }
 
     public String ofDna(String dnaString) {
@@ -23,6 +24,6 @@ public class RnaTranscription {
     }
 
     private String getTranslatedChar(char currentChar) {
-        return translation.get(String.valueOf(currentChar));
+        return translation.get(currentChar);
     }
 }
